@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
     sudo yum -y install python-pip git ansible docker
     sudo pip install docker docker-compose
     sudo systemctl start docker
+    sudo setenforce 0
     sudo git clone https://github.com/ansible/awx.git
     sudo ansible-playbook -i /home/vagrant/awx/installer/inventory /home/vagrant/awx/installer/install.yml
 
