@@ -19,9 +19,9 @@ Vagrant.configure("2") do |config|
     sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     sudo dnf -y install epel-release wget
     # install containerd before the docker-ce installation
-    sudo wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
-    sudo dnf localinstall -y containerd.io-1.2.6-3.3.el7.x86_64.rpm
-    sudo rm -f containerd.io-1.2.6-3.3.el7.x86_64.rpm
+    sudo wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.13-3.2.el7.x86_64.rpm
+    sudo dnf localinstall -y containerd.io-1.2.13-3.2.el7.x86_64.rpm m
+    sudo rm -f containerd.io-1.2.13-3.2.el7.x86_64.rpm
     sudo dnf -y install python3-pip git docker-ce ansible
     sudo pip3 install docker docker-compose
     sudo systemctl start docker
